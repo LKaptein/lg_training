@@ -1,0 +1,8 @@
+/var/log/drupal/*.log {
+ daily
+ rotate 30
+ missingok
+ create 644 syslog adm
+ compress
+ sharedscripts
+}
