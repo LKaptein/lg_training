@@ -1,12 +1,10 @@
 ---
 vagrant:
   synced_folders:
-    - host: "/Users/BarisW/Sites/LimoenGroen/training/htdocs"
+    - host: "/Users/lauriekaptein/Sites/training/htdocs"
       guest: /var/www/training/htdocs
       type: nfs
-    - host: "/Users/BarisW/Sites/LimoenGroen/training/tests"
-      guest: /var/www/training/tests
-    - host: "/Users/BarisW/Google Drive/LimoenGroen/Projecten/drush/aliases"
+    - host: "/Users/lauriekaptein/Google Drive/LimoenGroen/Projecten/drush/aliases"
       guest: /etc/drush
 ansible:
-  reroute_email: username@limoengroen.nl
+  reroute_email: laurie@limoengroen.nl

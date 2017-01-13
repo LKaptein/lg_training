@@ -1,0 +1,21 @@
+name: Hello World Module
+description: Creates a page showing "Hello World".
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - datetime:datetime
+  - link:link
+  - drupal:views
+
+test_dependencies:
+ - drupal:image
+
+configure: hello_world.settings
+
+
+# Note: do not add the 'version'  property yourself!
+# It will be added automatically by the packager on drupal.org.
+version: 1.0
