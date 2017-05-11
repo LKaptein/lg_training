@@ -1,0 +1,5 @@
+name: xx Base
+description:  This module contain general helpers for the project
+type: module
+core: 8.x
+version: 1.1

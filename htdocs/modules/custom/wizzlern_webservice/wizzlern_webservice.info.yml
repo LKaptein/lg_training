@@ -1,0 +1,5 @@
+name: wizzlern_webservice
+type: module
+description: A scraper for URLs
+core: 8.x
+package: wizzlern

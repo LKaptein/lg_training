@@ -1,0 +1,4 @@
+services:
+  plugin.manager.html_parser:
+    class: Drupal\wizzlern_webservice\Plugin\HtmlParserManager
+    parent: default_plugin_manager
