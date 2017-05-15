@@ -1,0 +1,5 @@
+name: Test Entity Count
+description:  This module contains various methods to count entities
+type: module
+core: 8.x
+version: 8.x-8.1
