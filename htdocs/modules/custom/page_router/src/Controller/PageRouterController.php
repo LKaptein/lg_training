@@ -1,11 +1,21 @@
 <?php
 
+namespace Drupal\page_router\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+
 /**
- * Created by PhpStorm.
- * User: lauriekaptein
- * Date: 14/06/2017
- * Time: 16:15
+ * Output for a page redirect to NewPage
  */
 class PageRouterController {
+  public function myMessage($count) {
+    $i=0;
+    do {
+      echo "count is ". $i . '<br/>';
+      $i++;
+    } while ($i < $count);
+
+    return new Response("Laurie's First Custom Page!!");
+  }
 
 }
