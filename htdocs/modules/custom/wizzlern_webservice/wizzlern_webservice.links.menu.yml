@@ -1,9 +1,0 @@
-
-# Web scraper menu items definition
-entity.web_scraper.collection:
-  title: 'Web scraper'
-  route_name: entity.web_scraper.collection
-  description: 'List Web scraper (bundles)'
-  parent: system.admin_structure
-  weight: 99
-
