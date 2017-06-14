@@ -1,0 +1,6 @@
+entity.web_scraper.add_form:
+  route_name: 'entity.web_scraper.add_form'
+  title: 'Add Web scraper'
+  appears_on:
+    - entity.web_scraper.collection
+
