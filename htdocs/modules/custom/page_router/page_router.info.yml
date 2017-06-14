@@ -1,0 +1,6 @@
+name: 'Page Router'
+type: module
+description: 'Uses a router to redirect to a new page.'
+package: LaurieLearn
+version: 8.x-1.x
+core: 8.x
