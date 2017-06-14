@@ -1,9 +1,0 @@
----
-# file: webservers.yml
-
-- name: "Configure the webservers."
-  hosts: webservers
-  roles:
-    - webserver
-
-
