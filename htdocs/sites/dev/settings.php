@@ -32,7 +32,7 @@ $settings['hash_salt'] = 'eI7Ag7hMBdRXXcgDIpVv71mxS5mDwZRriHMY05cMjHezL27t-Ch-uC
 $settings['update_free_access'] = FALSE;
 
 $settings['file_public_path'] = 'files';
-$settings['file_private_path'] = '/var/www/training/private';
+//$settings['file_private_path'] = '/var/www/training/private';
 
 $settings['trusted_host_patterns'] = [
   '^training\.dev$',
@@ -40,7 +40,7 @@ $settings['trusted_host_patterns'] = [
 
 $settings['system.site']['name'] = 'DEV Training';
 // Time in seconds, 0 = no caching.
-$settings['system.performance']['cache']['page']['max_age'] = 0;
+//$settings['system.performance']['cache']['page']['max_age'] = 0;
 
 $settings['system.performance']['cache']['page']['use_internal)'] = FALSE;
 $settings['system.performance']['css']['preprocess'] = FALSE;
@@ -57,6 +57,7 @@ $settings['system.cron']['threshold']['autorun'] = 0;
 $settings['system.file']['path']['temporary'] = '/tmp';
 // Time in seconds, 0 = never delete.
 $settings['system.file']['temporary_maximum_age'] = 21600;
+
 
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
