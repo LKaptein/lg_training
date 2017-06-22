@@ -1,6 +1,6 @@
-name: 'Page Router'
+name: 'Inspiring Message'
 type: module
-description: 'Uses a router to redirect to a new page.'
+description: 'Returns a randomly generated inspiring message.'
 package: LaurieLearn
 version: 8.x-1.x
 core: 8.x
