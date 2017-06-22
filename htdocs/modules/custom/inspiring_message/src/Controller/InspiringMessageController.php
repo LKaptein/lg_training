@@ -12,12 +12,26 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class InspiringMessageController {
   public function newMessage() {
+
     $current_user = \Drupal::currentuser();
+
+    // generate customized welcome message with username and current date
     $welcome_message = 'Hello ' . $current_user->getDisplayName() . '</br>';
     $welcome_message .= 'Today is ' . date("l M d, Y G:i", time());
 
-    $inspring_message = "<h3>Always try your best!</h3>";
-    return new Response($welcome_message . '<p>' . $inspring_message);
+    $terms = \Drupal::entityManager()->getStorage('taxonomy_term')->loadTree('inspiring_message');
+
+    $termID = 3;
+
+    // TODO select random taxonomy term from array
+    //$termID = array_rand($terms);
+
+    //get description for the random term selected
+    $random_message = taxonomy_term_load($termID)->get('description')->value;
+
+    $inspring_message = "<h3>" . $term_object;
+
+    return new Response($welcome_message . '<p><h2>' . $random_message . '</h2>');
   }
 }
 
