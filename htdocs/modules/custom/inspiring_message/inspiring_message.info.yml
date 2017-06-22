@@ -1,6 +1,0 @@
-name: 'Inspiring Message'
-type: module
-description: 'Returns an inspiring new message on each page visit.'
-package: LaurieLearn
-version: 8.x-1.x
-core: 8.x

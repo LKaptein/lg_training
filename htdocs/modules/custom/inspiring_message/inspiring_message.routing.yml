@@ -1,6 +1,0 @@
-inspiring_message:
-  path: /messages/inspiring
-  defaults:
-    _controller: Drupal\inspiring_message\Controller\InspiringMessageController::returnMessage
-  requirements:
-    _permission: 'access content'
