@@ -2,11 +2,6 @@
 
 namespace Drupal\inspiring_message\Controller;
 
-//use Drupal\page_router\PageRouterServices\PageMessageGenerator;
-//use Drupal\Core\Controller\ControllerBase;
-//use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpFoundation\Response;
-
 /*
  * Returns a randomly generated inspiring message
  */
@@ -27,11 +22,21 @@ class InspiringMessageController {
     //$termID = array_rand($terms);
 
     //get description for the random term selected
-    $random_message = taxonomy_term_load($termID)->get('description')->value;
+    $random_message = taxonomy_term_load($termID)->get('description')->getValue();
 
-    $inspring_message = "<h3>" . $term_object;
+    $inspring_message = $welcome_message . '<p><h2>' . $random_message . '</h2>';
 
-    return new Response($welcome_message . '<p><h2>' . $random_message . '</h2>');
+    //return new Response($welcome_message . '<p><h2>' . $random_message . '</h2>');
+    $items = [
+      $inspring_message
+    ];
+
+    $build = [
+      '#theme' => 'item_list',
+      '#items' => $items,
+    ];
+
+    return $build;
   }
 }
 

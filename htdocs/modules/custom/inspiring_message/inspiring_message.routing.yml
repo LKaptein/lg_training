@@ -1,4 +1,4 @@
-return_inspiring_message:
+inspiring_message.display_message:
   path: /message/inspiring
   defaults:
     _controller: Drupal\inspiring_message\Controller\InspiringMessageController::newMessage
