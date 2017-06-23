@@ -1,4 +1,4 @@
-first_page_redirect:
+page_router.show_message:
   path: /laurie/newpage/{count}
   defaults:
     _controller: Drupal\page_router\Controller\PageRouterController::myMessage
