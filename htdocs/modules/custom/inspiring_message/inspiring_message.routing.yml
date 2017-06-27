@@ -4,3 +4,10 @@ inspiring_message.display_message:
     _controller: Drupal\inspiring_message\Controller\InspiringMessageController::newMessage
   requirements:
     _permission: 'access content'
+
+inspiring_message.practice_output:
+  path: /practice/strings
+  defaults:
+    _controller: Drupal\inspiring_message\Controller\PracticeController::stringFormatting
+  requirements:
+    _permission: 'access content'

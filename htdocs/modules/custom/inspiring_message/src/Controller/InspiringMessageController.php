@@ -26,6 +26,7 @@ class InspiringMessageController {
 
     // TODO: only get message node with type = inspiring
 
+
     // Select body from random node to display as inspiring message.
     // TODO: Replace -> value.
     //        Loading value This only loads the text from the message, but ignores the text format.
