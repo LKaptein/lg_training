@@ -2,6 +2,9 @@
 
 namespace Drupal\inspiring_message\Controller;
 
+use Drupal\Core\Entity\Query\QueryFactory;
+
+use Drupal\Core\Entity\Query\QueryInterface;
 /*
  * Returns a randomly generated inspiring message
  */
@@ -14,13 +17,17 @@ class InspiringMessageController {
     // TODO: move inspring message into a service, and use inheritance here
     // TODO: dependency injection
 
-    // TODO: Change $nids variable name(because it contains nodes, not node IDs.
-    //       ......Name a variable after what it contains, not after how its being used
+    $welcome_message = $this->welcomeMessage();
 
-    // TODO:  Loading entities for only using the array keys is a waste of resources if there is an alternative. Find an
+   // TODO:  Loading entities for only using the array keys is a waste of resources if there is an alternative. Find an
     //          alternative that only returns node IDs, does the randomizing _
     //          and_ limits the results to content of type 'inspring'.
-    $welcome_message = $this->welcomeMessage();
+
+    // Get all nodes of type 'message'
+    $nodes = \Drupal::entityQuery('node')
+                ->condition('type', 'message')
+                //->condition('type', 'message')
+                ->execute();
 
     $nids = \Drupal::EntityTypeManager()->getStorage('node')->loadMultiple();
 

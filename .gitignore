@@ -2,3 +2,6 @@
 config/custom.yml
 site.retry
 vm/
+htdocs_old2/
+htdocs/
+.gitignore

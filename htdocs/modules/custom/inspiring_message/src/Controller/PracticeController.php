@@ -2,7 +2,7 @@
 
 namespace Drupal\inspiring_message\Controller;
 
-Use \Drupal\Component\Render\FormattableMarkup;
+use Drupal\Component\Render\FormattableMarkup;
 /*
 * Returns practice exercises and output
 */
@@ -24,8 +24,12 @@ class PracticeController {
     );
 
     // 3. Static text with variables -  placeholder replacement value is a string
-    $number = 'abc';
-    $translatedText = $this->placeholderFormat('Translatable text with a number .. @number', [@number => (string) $number]);
+    $number = rand(0,100);
+    $output = new FormattableMarkup('<p>Translatable text with a number ...@number.', ['@number' => $number]);
+
+    $build[] = array(
+      '#markup' => $output,
+    );
     return $build;
   }
 }
